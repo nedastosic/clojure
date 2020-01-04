@@ -69,14 +69,47 @@
         ))
     ))
 
+(defn print-maze []
+  (let [n (int (Math/sqrt (count @atom-vector)))]
+    (print ".")
+    (apply print (repeat n "__"))
+    (loop [i 0]
+      (when (< i n)
+        (println)
+        (loop [j 0]
+          (when (< j n)
 
-(generate-matrix 9)
-(generate-vector 9)
+            (if (not= -1 (- j 1))
+              (when (= 1 (get (get @atom-matrix (+ (* i n) j)) (- (+ (* i n) j) 1)))
+                (print "|")
+                )
+              (print "|")
+              )
 
-(println (initialize))
-(dfs 0)
 
-(println @atom-vector)
-(println @atom-matrix)
+            (if (not= n (+ i 1))
+              (if (= 1 (get (get @atom-matrix (+ (* i n) j)) (+ (+ (* i n) j) n) 1))
+                (print "___")
+                (print "  "))
+              (print "___"))
+
+
+            (when (= n (+ j 1))
+              (print "|")
+              )
+
+            (recur (+ j 1))))
+        (recur (+ i 1))))
+    ))
+
+
+(generate-matrix 144)
+(generate-vector 144)
+(initialize)
+
+(dfs 57)
+(print-maze)
+;(println @atom-vector)
+;(println @atom-matrix)
 
 ;(println @atom-matrix)
