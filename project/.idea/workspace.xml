@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8431129a-25e5-438d-9692-1ddc248245c5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/project/maze_generator.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/maze_generator.clj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -128,22 +127,38 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1577977978253" />
-    <state width="1323" height="271" key="GridCell.Tab.0.bottom" timestamp="1578222916034">
+    <state width="1323" height="371" key="GridCell.Tab.0.bottom" timestamp="1578227353473">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="271" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1578222916034" />
-    <state width="1323" height="271" key="GridCell.Tab.0.center" timestamp="1578222916033">
+    <state width="1323" height="371" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1578227353473" />
+    <state width="1323" height="371" key="GridCell.Tab.0.center" timestamp="1578227353473">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="271" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1578222916033" />
-    <state width="1323" height="271" key="GridCell.Tab.0.left" timestamp="1578222916033">
+    <state width="1323" height="371" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1578227353473" />
+    <state width="1323" height="371" key="GridCell.Tab.0.left" timestamp="1578227353473">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="271" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1578222916033" />
-    <state width="1323" height="271" key="GridCell.Tab.0.right" timestamp="1578222916034">
+    <state width="1323" height="371" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1578227353473" />
+    <state width="1323" height="371" key="GridCell.Tab.0.right" timestamp="1578227353473">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="271" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1578222916034" />
+    <state width="1323" height="371" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1578227353473" />
+    <state width="1323" height="249" key="GridCell.Tab.1.bottom" timestamp="1578227298614">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="249" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1578227298614" />
+    <state width="1323" height="249" key="GridCell.Tab.1.center" timestamp="1578227298614">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="249" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1578227298614" />
+    <state width="1323" height="249" key="GridCell.Tab.1.left" timestamp="1578227298614">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="249" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1578227298614" />
+    <state width="1323" height="249" key="GridCell.Tab.1.right" timestamp="1578227298614">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="249" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1578227298614" />
     <state x="378" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1578046025183">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -152,5 +167,19 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="334" y="49" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1578048354749" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="ClojureScriptRunConfiguration">
+        <watch expression="(and (= neighbour &quot;right&quot;) (not= (- n 1) (mod v n)) (= 0 (get (get @atom-matrix v) (+ v 1))))" language="Clojure" />
+        <watch expression="(and (= neighbour &quot;bottom&quot;) (&lt; v (* n (- n 1))) (= 0 (get (get @atom-matrix v) (+ v n))))" language="Clojure" />
+        <watch expression="(= neighbour &quot;bottom&quot;)" language="Clojure" />
+        <watch expression="(&lt; v (* n (- n 1)))" language="Clojure" />
+        <watch expression="(= 0 (get (get @atom-matrix v) (+ v n)))" language="Clojure" />
+        <watch expression="(get @atom-matrix v)" language="Clojure" />
+        <watch expression="(+ v n)" language="Clojure" />
+        <watch expression="(get (get @atom-matrix v) (int (+ v n)) )" language="Clojure" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

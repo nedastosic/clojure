@@ -114,6 +114,14 @@
         (recur (+ i 1))))
     ))
 
+(defn can-pass [v neighbour]
+  (let [n (int (Math/sqrt (count @atom-vector)))]
+    (cond
+      (and (= neighbour "left") (not= 0 (mod v n)) (= 0 (get (get @atom-matrix v) (- v 1)))) true
+      (and (= neighbour "right") (not= (- n 1) (mod v n)) (= 0 (get (get @atom-matrix v) (+ v 1)))) true
+      (and (= neighbour "top") (>= v n) (= 0 (get (get @atom-matrix v) (- v n)))) true
+      (and (= neighbour "bottom") (< v (* n (- n 1))) (= 0 (get (get @atom-matrix v) (+ v n)))) true
+      :else false)))
 
 (def shuffled-global {})
 (generate-matrix 144)
