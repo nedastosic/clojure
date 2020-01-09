@@ -173,7 +173,7 @@
 
 (defn print-solved-maze []
   (do
-    (prune)
+    ;(prune)
     (let [n (int (Math/sqrt (count @atom-vector)))]
       (print ".in .")
       (loop [i 0]
@@ -264,7 +264,7 @@
             (do
               (set-start-node v)
               (set-end-node (get (get shuffled-global v) i))
-              ;(println (str v "->" (get (get shuffled-global v) i)))
+              (println (str v "->" (get (get shuffled-global v) i)))
               (solve-maze (get (get shuffled-global v) i))
 
               (recur (+ i 1)))
@@ -274,7 +274,7 @@
 
 
 
-(initialize 100)
+(initialize 16)
 (dfs 0)
 (print-maze)
 (def shuffled-global {})
