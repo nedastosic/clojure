@@ -1,18 +1,15 @@
 # Maze algorithm in Clojure
 
 Implementation of Depth-first search (DFS) algorithm in Clojure for generation and solving a maze.
-
-The algorithm is recursive and uses a matrix graph representation 
-where 1 denotes a wall between two nodes while 0 denotes a path.
-
+The algorithm is recursive and uses a matrix graph representation where 1 denotes a wall between two nodes while 0 denotes a path.
 When a maze is initiated all neighbors are connected with walls.
 
 ## Generate algorithm
 
 DFS algorithm starts from a given node v. The algorithm takes a random unvisited neighbor node as a new v node and breaks the wall between the two nodes,
-while other neighbor unvisited nodes are pushed to stack.
-This method repeats until the node v has no neighbors unvisited neighbors.
-Then the algorithm takes an unvisited node from the stack and repeats the method.
+while other neighbor unvisited nodes are pushed to the stack.
+This method repeats until the node v has no unvisited neighbors.
+Then, the algorithm takes an unvisited node from the stack and repeats the method.
 The algorithm ends when all nodes are visited.
 
 ## Solve algorithm
