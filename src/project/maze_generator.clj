@@ -274,7 +274,7 @@
 
 
 
-(initialize 16)
+(initialize 225)
 (dfs 0)
 (print-maze)
 (def shuffled-global {})
